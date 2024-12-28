@@ -212,26 +212,6 @@ public class Calculator extends Frame implements ActionListener {
                     operators.push(cur);
                 }
             }
-            Stack<Double> tmp = new Stack<>();
-            Stack<Character> tmp1 = new Stack<>();
-            while (!operands.isEmpty()) {
-                System.out.print(operands.peek());
-                System.out.print(" ");
-                tmp.push(operands.pop());
-            }
-            System.out.println("");
-            while (!operators.isEmpty()) {
-                System.out.print(operators.peek());
-                System.out.print(" ");
-                tmp1.push(operators.pop());
-            }
-            System.out.println("");
-            while (!tmp.isEmpty()) {
-                operands.push(tmp.pop());
-            }
-            while (!tmp1.isEmpty()) {
-                operators.push(tmp1.pop());
-            }
         }
         while (!operators.isEmpty()) {
             double n1 = operands.pop();
